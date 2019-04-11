@@ -1,0 +1,205 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyPersonalWebsite.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - ANIS AHAMMED (BIJOY)</title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="keywords" content="Edulearn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/mislider.css" rel="stylesheet" type="text/css" />
+    <link href="css/mislider-custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+  </head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <header>
+		<div class="top-head-w3ls py-2 bg-dark">
+			<div class="container">
+				<div class="row">
+					<h1 class="text-capitalize text-white col-7">
+						<i class="fas fa-book text-dark bg-white p-2 rounded-circle mr-3"></i>welcome to My Site</h1>
+					<div class="social-icons text-right col-5">
+						<ul class="list-unstyled">
+							<li>
+								<a href="https://www.facebook.com" class="fab fa-facebook-f icon-border facebook rounded-circle"> </a>
+							</li>
+							<li class="mx-2">
+								<a href="#" class="fab fa-twitter icon-border twitter rounded-circle"> </a>
+							</li>
+							<li>
+								<a href="#" class="fab fa-google-plus-g icon-border googleplus rounded-circle"> </a>
+							</li>
+							<li class="ml-2">
+								<a href="#" class="fas fa-rss icon-border rss rounded-circle"> </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="middle-w3ls-nav py-2">
+			<div class="container">
+				<div class="row">
+					<a class="logo font-italic font-weight-bold col-lg-3 text-lg-left text-center" href="Default.aspx">BIJOY</a>
+					<div class="col-lg-9 right-info-agiles mt-lg-0 mt-sm-3 mt-1">
+						<div class="row">
+							<div class="col-sm-5 nav-middle">
+								<i class="far fa-envelope-open text-center mr-md-4 mr-sm-2 mr-4"></i>
+								<div class="agile-addresmk">
+									<p>
+										<span class="font-weight-bold text-dark">Mail Me</span>
+										<a href="mailto:mail@example.com">anisahammed72@gmail.com</a>
+									</p>
+								</div>
+							</div>
+							<div class="col-sm-4 col-6 nav-middle mt-sm-0 mt-2">
+								<i class="fas fa-phone-volume text-center mr-md-4 mr-sm-2 mr-4"></i>
+								<div class="agile-addresmk">
+									<p>
+										<span class="font-weight-bold text-dark">Call Me</span>
+										01751584712
+									</p>
+								</div>
+							</div>
+							<div class="col-sm-3 col-6 top-login-butt text-right mt-sm-2">
+								<a href="#" class="button-head-mow3 text-white">Login</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	
+
+    <div class="container-fluid body-content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+	<!-- footer -->
+	<footer>
+		<div class="container py-4">
+			<div class="row py-xl-10 py-sm-3" style="text-align: center">
+				<div class="col-lg-10 map">
+					<h2 class="contact-title text-capitalize text-white font-weight-light mb-sm-10 mb-3">My
+						<span class="font-weight-bold">Location</span>
+					</h2>
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7298.959612356456!2d90.36578352294117!3d23.837090201861013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14a3366b005%3A0x901b07016468944c!2sMirpur+DOHS%2C+Dhaka!5e0!3m2!1sen!2sbd!4v1554178786881!5m2!1sen!2sbd" width="1000px" height="600" frameborder="0" style="border:0" allowfullscreen></iframe><div class="conta-posi-w3ls p-4 rounded">
+						<h5 class="text-white font-weight-bold mb-3">Address</h5>
+					    <p class="para-agileits-w3layouts text-white">
+					        <i class="fas fa-map-marker pr-3"></i>Mirpur DOHS, Bangladesh</p>
+					    <p class="para-agileits-w3layouts text-white my-sm-3 my-2">
+					        <i class="fas fa-phone pr-3"></i>01751584712</p>
+					    <p class="para-agileits-w3layouts">
+					        <i class="far fa-envelope-open pr-2"></i>
+					        <a href="mailto:mail@example.com" class=" text-white">anisahammed72@gmail.com</a>
+					    </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-agiles py-3">
+			<div class="container">
+				<div class="row">
+					<p class="col-lg-8 copy-right-grids text-white text-lg-left text-center mt-lg-1">© 2019 || Design by
+						<a href="#" target="_blank">BIJOY</a>
+					</p>
+					<!-- social icons -->
+					<div class="social-icons text-lg-right text-center col-lg-4 mt-lg-0 mt-3">
+						<ul class="list-unstyled">
+							<li>
+								<a href="#" class="fab fa-facebook-f icon-border facebook rounded-circle"> </a>
+							</li>
+							<li class="mx-2">
+								<a href="#" class="fab fa-twitter icon-border twitter rounded-circle"> </a>
+							</li>
+							<li>
+								<a href="#" class="fab fa-google-plus-g icon-border googleplus rounded-circle"> </a>
+							</li>
+							<li class="ml-2">
+								<a href="#" class="fas fa-rss icon-border rss rounded-circle"> </a>
+							</li>
+						</ul>
+					</div>
+					<!-- //social icons -->
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/mislider.js"></script>
+	
+	<script>
+		jQuery(function ($) {
+			var slider = $('.mis-stage').miSlider({
+				//  The height of the stage in px. Options: false or positive integer. false = height is calculated using maximum slide heights. Default: false
+				stageHeight: 320,
+				//  Number of slides visible at one time. Options: false or positive integer. false = Fit as many as possible.  Default: 1
+				slidesOnStage: false,
+				//  The location of the current slide on the stage. Options: 'left', 'right', 'center'. Defualt: 'left'
+				slidePosition: 'center',
+				//  The slide to start on. Options: 'beg', 'mid', 'end' or slide number starting at 1 - '1','2','3', etc. Defualt: 'beg'
+				slideStart: 'mid',
+				//  The relative percentage scaling factor of the current slide - other slides are scaled down. Options: positive number 100 or higher. 100 = No scaling. Defualt: 100
+				slideScaling: 150,
+				//  The vertical offset of the slide center as a percentage of slide height. Options:  positive or negative number. Neg value = up. Pos value = down. 0 = No offset. Default: 0
+				offsetV: -5,
+				//  Center slide contents vertically - Boolean. Default: false
+				centerV: true,
+				//  Opacity of the prev and next button navigation when not transitioning. Options: Number between 0 and 1. 0 (transparent) - 1 (opaque). Default: .5
+				navButtonsOpacity: 1,
+			});
+		});
+	</script>
+	
+	<script src="js/numscroller-1.0.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script src="js/edulearn.js"></script>
+
+    </form>
+</body>
+</html>
